@@ -1,0 +1,19 @@
+#include<iostream.h>
+#include<fstream.h>
+#include<conio.h>
+#include<stdio.h>
+void main()
+{ 
+   ifstream f1("boss_file",ios::in);  //boss_file consist the 1600 characters, which is to be splited into 100 files
+   ofstream f2;
+   char filename[10],string[15]
+   for(int i=1;i<=100;i++)
+    { sprintf(filename,"file%d",i);
+      f2.open(filename,ios::out);
+       cin.get(string,sizeof(string));
+      f2<<string;
+      }
+     f1.close();
+     f2.close();
+     getch();
+     }
